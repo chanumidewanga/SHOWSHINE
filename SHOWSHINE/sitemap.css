@@ -1,0 +1,42 @@
+svg {
+    display: flex;
+    scale: 65%;
+    position:absolute;
+    left: -200px;
+    top: -100px;
+  }
+
+  .svg-container {
+    position: relative;
+    height: 600px;
+    margin-left: -3%;
+    padding-top: 100px;
+  }
+  header{
+    margin-top: 0%;
+  }
+  h1 {
+    text-align: center;
+    padding-top: 10px
+  }
+
+  #svgJS g:hover polyline,
+  #svgJS g:hover line {
+    fill: none;
+    stroke-width: 2;
+    stroke: green;
+  }
+
+  #svgJS g:hover g text,
+  #svgJS g:hover text {
+    font-weight: bold;
+  }
+
+  #svgJS g:hover polygon,
+  #svgJS g:hover rect,
+  #svgJS g:focus polygon,
+  #svgJS g:focus rect {
+    fill: hsla(0, 0%, 0%, 0.3);
+    stroke: black;
+    stroke-width: 2;
+  }

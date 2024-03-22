@@ -1,0 +1,353 @@
+@import url(https://fonts.googleapis.com/css2?family=Raleway&display=swap);
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navBarSection img{
+  max-width: 100%;
+  display: block;
+}
+
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: left;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+}
+
+/* creating the nav bar */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 5px;
+}
+
+nav {
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  /* keeps 100% of the width and removes the height of the navbar*/
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+nav li {
+  padding: 0;
+  margin: 2px 0px 0px 0px;
+}
+
+nav a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0;
+  /* shows the opacity in 250 miliseconds once the checkbox is clicked */
+  transition: opacity 150ms ease-in-out;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  /* shows the opacity in 250 miliseconds once the checkbox is clicked */
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+nav a:link {
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: black;
+  border-bottom: 2px solid goldenrod;
+  transition: 0.2s ease-out;
+}
+
+nav a:active {
+  color: white;
+  font-weight: 900;
+}
+
+.display {
+  font-weight: bold;
+}
+
+/* end of nav bar */
+
+
+
+
+
+/* start of footer */
+
+.footer_container {
+  line-height: 1.5;
+  max-width: 100%;
+  margin: auto;
+}
+
+.footer_row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-color: #24262b;
+  padding: 3rem 0;
+}
+
+.footer-col {
+  /* flex-basis: 25%; */
+  width: 20%;
+  padding: 0 1rem;
+}
+
+.aboutus {
+  width: 35%;
+  color: #bbbbbb;
+}
+
+.explore {
+  width: 15%;
+}
+
+.shop {
+  width: 15%;
+}
+
+.links {
+  width: 35%;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.social-links img {
+  display: block;
+  margin-left: 4px;
+  margin-top: 4px;
+  width: 80%;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 100px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #e91e63;
+  margin: 20px auto;
+}
+
+.footer_copyright {
+  color: #bbbbbb;
+  text-align: center;
+}
+
+.footer_page_editor {
+  text-align: center;
+}
+
+.footer_page_editor a {
+  text-decoration: none;
+  padding: 3rem;
+  color: #bbbbbb;
+}
+
+.footer_page_editor a:hover {
+  text-decoration: underline;
+}
+
+/*responsive*/
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
+
+/* end of footer  */
+
+/* responsive */
+@media screen and (min-width: 850px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr);
+  }
+
+  .logo {
+    grid-column: 1/3;
+  }
+
+  nav {
+    position: relative;
+    text-align: center;
+    transition: none;
+    transform: scale(1, 1);
+    background: none;
+    top: initial;
+    left: initial;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: right;
+    padding-left: 10px;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 2rem;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  header img {
+    width: 40%;
+  }
+}
+
+header{
+  margin-top: 3%;
+}

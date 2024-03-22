@@ -1,0 +1,104 @@
+
+  h1{
+    text-align: center;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  p {
+    font-size: larger;
+    text-align: center;
+    /* color: rgb(22, 20, 16); */
+    padding: 2%;
+    /* background-color: #bbbbbb3c; */
+  }
+  
+  /* Slideshow container */
+  .slideshow-container {
+    padding-top: 5%;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;   
+  }
+
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+ 
+
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {
+      font-size: 11px;
+    }
+  }
+
+  /*movie poster img*/
+  .movies{
+    width: 100%;
+    text-align: center;
+ 
+    padding: 15px;
+  }
+
+  .posters img{
+    flex:0 0 auto;
+    height: 300px;
+    margin: 25px;
+    vertical-align: middle;
+  
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+  }
+  .posters img:hover{
+    transform: scale(1.25);
+    transition:0.5s ease-in-out ;
+  }

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+    @import url(https://fonts.googleapis.com/css2?family=Raleway&display=swap);
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: left;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+header img {
+  width: 60%;
+  height: auto;
+}
+
+/* creating the nav bar */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 5px;
+}
+
+nav {
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  /* keeps 100% of the width and removes the height of the navbar*/
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+nav li {
+  padding: 0;
+  margin: 2px 0px 0px 0px;
+}
+
+nav a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0;
+  /* shows the opacity in 250 miliseconds once the checkbox is clicked */
+  transition: opacity 150ms ease-in-out;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  /* shows the opacity in 250 miliseconds once the checkbox is clicked */
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+nav a:link {
+  text-decoration: none;
+  padding: 10px;
+}
+
+nav a:hover {
+  background-color: black;
+  border-bottom: 2px solid goldenrod;
+  transition: 0.2s ease-out;
+}
+
+nav a:active {
+  color: white;
+  font-weight: 900;
+}
+
+.display {
+  font-weight: bold;
+}
+
+/* end of nav bar */
+
+/* start of footer */
+
+.footer_container {
+  line-height: 1.5;
+  max-width: 100%;
+  margin: auto;
+}
+
+.footer_row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-color: #24262b;
+  padding: 3rem 0;
+}
+
+.footer-col {
+  /* flex-basis: 25%; */
+  width: 20%;
+  padding: 0 1rem;
+}
+
+.aboutus {
+  width: 35%;
+  color: #bbbbbb;
+}
+
+.explore {
+  width: 15%;
+}
+
+.shop {
+  width: 15%;
+}
+
+.links {
+  width: 35%;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.social-links img {
+  display: block;
+  margin-left: 4px;
+  margin-top: 4px;
+  width: 80%;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 100px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+hr {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #e91e63;
+  margin: 20px auto;
+}
+
+.footer_copyright {
+  color: #bbbbbb;
+  text-align: center;
+}
+
+.footer_page_editor {
+  text-align: center;
+}
+
+.footer_page_editor a {
+  text-decoration: none;
+  padding: 3rem;
+  color: #bbbbbb;
+}
+
+.footer_page_editor a:hover {
+  text-decoration: underline;
+}
+
+/*responsive*/
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
+
+/* end of footer  */
+
+/* responsive */
+@media screen and (min-width: 850px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr);
+  }
+
+  .logo {
+    grid-column: 1/3;
+  }
+
+  nav {
+    position: relative;
+    text-align: center;
+    transition: none;
+    transform: scale(1, 1);
+    background: none;
+    top: initial;
+    left: initial;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: right;
+    padding-left: 10px;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 2rem;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 850px) {
+    
+}
+    .youtube {
+        width: 100%;
+        text-align: center;
+    }
+    
+
+    .movie-container{
+        margin: 10%;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        background-color: rgb(196, 160, 0);
+        
+    }
+    .body{
+        padding-top: 100px;
+        width: 100%;
+    }
+    .body h1{
+        color: black ;
+        font-size: xxx-large;
+        text-align: center;
+    }
+    .body h2{
+        color: black ;
+        font-size: x-large;
+        text-align: center;
+    }
+
+    .body img{
+        height: 350px;
+        margin: 25px;
+    }
+    .body h3 {
+        color: white; 
+        font-size: x-large; 
+        
+    }
+    .movie-details{
+        width: 400px;
+        margin: 5%;
+    }
+    body p{
+        color: #f0f0f0;
+    }
+    .movie-summary{
+        background-color: white;
+        height: 320px;
+        margin: 5%;
+        padding: 40px;
+        border-radius: 3%;
+        text-align: center;
+    }
+    .body hr{
+        margin: 1%;
+        border-color: black;
+    }
+    .like-button, .dislike-button{
+        background-color: #bbbbbb;
+        padding: 4%;
+        margin: 1%;
+        border-radius: 5%;
+        
+    }
+    .like-button:hover{
+        background-color: rgb(255, 208, 0);
+        transition: 0.5s;
+    }
+    .dislike-button:hover{
+        background-color: red;
+        transition: 0.5s;
+    }
+    .nav-buttons{
+        text-align: center;
+        padding: 2%;
+        width: 600;
+    }
+    .nav-buttons a{
+        font-size: medium;
+        margin: 0.5%;
+        padding: 1% 2%;
+        background-color:white ;
+        border-radius: 5%;
+        box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        color: black ;
+        text-decoration: none;
+    }
+
+    .nav-buttons a:hover{
+        background-color: rgb(196, 160, 0);
+        color: white;
+        transition: 0.4s;
+    }
+    @media screen and (max-width: 600px) {
+        .movie {
+          width: 100%;
+        }
+      }
+    </style>
+    </head>
+
+    <body>  
+        <header>
+            <img src="logos/Showshinegold.png" alt="showshine logo">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+            <label for="nav-toggle" class="nav-toggle-label">
+              <span></span>
+            </label>
+            <nav>
+              <ul class="nav-elements">
+                <li class="nav-item">
+                  <a class="display" href="#home.html">Home</a>
+                </li>
+                <li class="nav-item"><a href="#">Comments</a></li>
+                <li class="nav-item"><a href="shop.html">Shop</a></li>
+                <li class="nav-item"><a href="quiz.html">Quiz</a></li>
+                <li class="nav-item"><a href="sitemap.html">SiteMap</a></li>
+                <li class="nav-item"><a href="aboutus.html">About us</a></li>
+              </ul>
+            </nav>
+        </header>
+    <div class="body">
+        <h1>Taare Zameen Par</h1>
+        <h2>A Bollywood movie directed by Aamir Khan<br>starring Darsheel Safary and Aamir Khan</h2>
+        <br><br>
+        <div class="youtube">
+            <iframe width="80%" 
+            height="350" 
+            src="https://www.youtube.com/embed/CDbQ4hCQtvA" 
+            title="Aamir Khan Drew Eeshan Sharma Painting | Taare Zameen Par | Emotional Scene" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="movie-container">
+            <div class="movie-poster">
+            <img src="img8.jpg" alt="Taare Zameen Par Movie Poster">
+            </div>
+            <div class="movie-details">
+
+            <h3>
+                Taare Zameen Par<br>
+                2007 | 2h 44m | IMDb 8.3/10
+            </h3>
+            <p><br>"Taare Zameen Par" tells the story of an 8-year-old boy named Ishaan, who struggles in school due to his dyslexia and poor academic performance. After being sent to a boarding school by his parents, Ishaan meets a new art teacher named Nikumbh, who helps him to discover his hidden talents and learn to cope with his difficulties. The film features Darsheel Safary in the lead role, along with Aamir Khan, who plays the role of the art teacher. "Taare Zameen Par" received critical acclaim for its sensitive portrayal of a child's struggles and the importance of nurturing children's individual talents. It was a box office success and won several awards, including the Filmfare Award for Best Film.</p>
+            </div>
+            <div class="movie-summary">
+                <h4>Taare Zameen Par<hr><br>Director : Aamir Khan<br>
+                    Producer : Aamir Khan <br><br>
+                    Cast <br><hr>
+                    Darsheel Safary<br>
+                    Aamir Khan<br><hr><br>
+                    
+                </h4>
+            
+                <div class="like-button">
+                    <h5>Like</h5>
+                </div>
+                <div class="dislike-button">
+                    <h5>Dislike</h5>
+                </div> 
+            </div>
+
+        </div>
+        <div class="nav-buttons">
+            <a href="movie2.html">Previous Movie</a>
+            <a href="Additional_Content_page.html">Go back to Movies</a>
+            <a href="movie1.html">Next Movie</a>
+        </div>
+    </div>
+    </body>
+        <footer class="footer">
+            <div class="footer_container">
+              <div class="footer_row">
+        
+                <div class="footer-col aboutus">
+                  <h4>About Us</h4>
+                  <p>
+                    We, a platform designed to help new users start their journey into the world of anime, Bollywood and
+                    Hollywood movies, and K-dramas.
+                    Our goal is to provide personalized recommendations to each user based on their preferences and interests,
+                    helping them find the perfect show or movie to watch.
+                  </p>
+                </div>
+        
+                <div class="footer-col explore">
+                  <h4>Explore</h4>
+                  <ul>
+                    <li><a href="shop.html">shop</a></li>
+                    <li><a href="#">quiz</a></li>
+                    <!-- li>a to get many at once -->
+                    <li><a href="comments.html">comments</a></li>
+                    <li><a href="#">sitemap</a></li>
+                    <li><a href="team.html">about us</a></li>
+                    <li><a href="#">gallery</a></li>
+                  </ul>
+                </div>
+        
+                <div class="footer-col shop">
+                  <h4>online shop</h4>
+                  <ul>
+                    <li><a href="shop.html">Anime </a></li>
+                    <li><a href="shop.html">Bollywood </a></li>
+                    <li><a href="shop.html">K-Drama </a></li>
+                    <li><a href="shop.html">Hollywood</a></li>
+                  </ul>
+                </div>
+        
+                <div class="footer-col links">
+                  <h4>follow us</h4>
+                  <div class="social-links">
+                    <a href="https://www.instagram.com/"><img src="/logos/instagram-logo-24.png"
+                        alt="icon-instagram" /></a>
+                    <a href="https://www.facebook.com/"><img src="/logos/facebook-logo-24.png" alt="facebook-logo" /></a>
+                    <a href="https://twitter.com/?lang=en"><img src="/logos/twitter-logo-24.png" alt="twitter-logo" /></a>
+                    <a href="https://www.linkedin.com/"><img src="/logos/linkedin-logo-24.png" alt="linkedin-logo" /></a>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <p class="footer_copyright">SHOWSHINE © 2023 - All Rights Reserved</p>
+              <div class="footer_page_editor">
+                <a href="editor.html">Link to Page developer details</a>
+              </div>
+        
+          </footer>
+    </body>
+    </html>
+   

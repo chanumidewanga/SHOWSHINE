@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thumbnail Gallery</title>
+    <link rel="stylesheet" href="Image_Gallery.css">
+    <link rel="stylesheet" href="common.css">
+   
+  </head>
+
+  <body>
+    
+      <header>
+          <img src="logo.png" alt="showshine logo">
+          <input type="checkbox" id="nav-toggle" class="nav-toggle">
+          <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+          </label>
+          <nav>
+            <ul class="nav-elements">
+              <li class="nav-item">
+                <a class="display" href="#home.html">Home</a>
+              </li>
+              <li class="nav-item"><a href="#">Comments</a></li>
+              <li class="nav-item"><a href="shop.html">Shop</a></li>
+              <li class="nav-item"><a href="quiz.html">Quiz</a></li>
+              <li class="nav-item"><a href="sitemap.html">SiteMap</a></li>
+              <li class="nav-item"><a href="aboutus.html">About us</a></li>
+            </ul>
+          </nav>
+      </header>
+
+    <div class="bg">
+      <h2>AWARD WINNING MOVIES<br>2022</h2>
+    </div>
+
+    
+    <!-- Image Gallery Grid -->
+    <div class="Gallery">
+      <!--color scheme-->
+      <div class="color-toggle">
+        <button class="theme-btn-light" onclick="setTheme('light')" title="Light">
+        </button>
+    
+        <button class="theme-btn-mild" onclick="setTheme('mild')" title="Mild">
+        </button>
+    
+        <button class="theme-btn-dark" onclick="setTheme('dark')" title="Dark">
+        </button>
+        <button class="theme-btn-random" onclick="changeColor()" title="Random"></button>
+      </div>
+      <div class="font-toggle">
+        <button id="decrease-h1-font-size" style="font-size: x-small;">A</button>
+        <button id="normal-h1-font-size" style="font-size:medium;">A</button>
+        <button id="increase-h1-font-size" style="font-size: x-large;">A</button>
+      </div>
+      <h3>Hollywood</h3>
+      <div class="category">
+        
+        <div class="movie">
+          <img src="movie_1.jpg" alt="Tick,tick...Boom! Movie Poster">
+          <h1>Tick, Tick... Boom!</h1><br>
+          <p>
+            A 2021 musical drama film<br><br>
+            Best Motion picture - Satellite Award 2022<br>
+            Best Actor - Satellite Awards 2022 <br>
+            Best Sound - Satellite Awards 2022
+          </p>
+          </div>      
+        
+        <div class="movie">
+          <img src="movie_2.jpg" alt="Dune Movie Poster">
+          <h1>Dune</h1><br>
+          <p>
+            A 2021 science fiction film<br><br>
+            Best Visual Effects - BAFTA Awards 2022<br>
+            Best Production Design - BAFTA Awards 2022
+          </p>
+        </div>
+
+        <div class="movie">
+          <img src="movie_4.jpg" alt="Don't look up Movie Poster">
+          <h1>Don't Look Up</h1><br>
+          <p>
+            A 2021 satirical science-fiction comedy film<br><br>
+            Movie of the Year - AFI Awards 2022<br>
+            Best Screenplay - AAFCA Awards 2022
+          </p>
+        </div>
+
+        <div class="movie">
+          <img src="movie_3.jpg" alt="All Quiet on the Western Front Movie Poster">
+          <h1>All Quiet on the Western Front</h1><br>
+          <p>
+            A 2022 American epic war film<br><br>
+            Visual Effects - European Film Awards 2022<br>
+            Best Foreign Language Film - <br>
+            Las Vegas Film Critics Society Awards 2022
+          </p>
+        </div>
+      </div>
+    
+  
+
+      <h3>Bollywood</h3>
+      <div class="category">
+        
+        <div class="movie">
+          <img src="movie_5.jpg" alt="Gangubai Kathiawadi Movie Poster">
+          <h1>Gangubai Kathiawadi</h1><br>
+          <p>
+            A 2021 Indian crime biographical film<br><br>
+            Best Director - FOI Online Awards 2022<br>
+            Best Choreography - FOI Online Awards 2022<br>
+            Best Actress - Indian Film Festival, Melbourne 2022
+          </p>
+        </div>
+
+
+        <div class="movie">
+          <img src="movie_6.jpg" alt="Shershaah Movie Poster">
+          <h1>Shershaah</h1><br>
+          <p>
+            A  2021 Indian biographical war film<br><br>
+            Best Picture - IIFA Awards 2022<br>
+            Best Director - Filmfare Awards 2022<br>
+            Best Film - Filmfare Awards 2022
+          </p>
+        </div>
+
+
+        <div class="movie">
+          <img src="movie_7.jpg" alt="Sardar Udham Movie Poster">
+          <h1>Sardar Udham</h1><br>
+          <p>
+            A  2021 Indian biographical drama film<br><br>
+            Best Actor in a Leading Role - IIFA Awards 2022<br>
+            Best Cinematography - IIFA Awards 2022<br>
+            Best Film - Filmfare Awards 2022<br>
+          
+          </p>
+        </div>
+
+        <div class="movie">
+          <img src="movie_8.jpg" alt="83 Movie Poster">
+          <h1>83</h1><br>
+          <p>
+            A  2021 Indian sports drama film<br><br>
+            Best Story-Adapted - IIFA Awards 2022<br>
+            Best Actor - Bollywood Life Awards 2022<br>
+            Best Lyrics -  Filmfare Awards 2022  
+          </p>
+        </div>
+      </div>
+      </div>
+
+      <h3>Korean</h3>
+      <div class="category">
+        
+        <div class="movie">
+          <img src="movie_13.jpg" alt="The Pirates: The Last Royal Treasure Movie Poster">
+          <h1>The Pirates:<br>
+            The Last Royal Treasure</h1><br>
+          <p>
+            A  2022 South Korean period adventure film<br><br>
+            Best Visual Effects -<br> 
+            58th Grand Bell Awards 2022
+          </p>
+        </div>
+
+        <div class="movie">
+          <img src="movie_14.jpg" alt="Next Sohee Movie Poster">
+          <h1>Next Sohee</h1><br>
+          <p>
+            A  2022 South Korean drama film<br><br>
+            Best Film  - <br>
+            Pingyao International Film Festival 2022<br> 
+            Special Jury Prize - Tokyo FILMex 2022
+          </p>
+        </div>
+
+        <div class="movie">
+          <img src="movie_15.jpg" alt="Broker Movie Poster">
+          <h1>Broker</h1><br>
+          <p>
+            A  2022 South Korean drama film<br><br>
+            Best Actor - Cannes Film Festival 2022<br>
+            Ecumenical Jury Award - Cannes Film Festival 2022<br>
+            Best Director -  Asian Film Awards 2022
+          </p>
+
+        </div>
+
+        <div class="movie">
+          <img src="movie_16.jpg" alt="Kingmaker Movie Poster">
+          <h1>Kingmaker</h1><br>
+          <p>
+            A  2022 South Korean political drama film<br><br>
+            Best Director - Baek Sang Art Awards 2022<br>
+            Best Actor - Baek Sang Art Awards 2022<br>
+            Best Art Direction - Blue Dragon Award 2022
+          </p>
+        </div>
+      </div>
+
+      <h3>Anime</h3>
+      <div class="category">
+        
+        <div class="movie">
+          <img src="movie_9.jpg" alt="Jujutsu Kaisen 0 Movie Poster">
+          <h1>Jujutsu Kaisen 0</h1><br>
+          <p>
+            A 2021 Japanese animated dark fantasy film<br><br>
+            Best Film - Crunchyroll Anime Awards 2022 
+          </p>
+        </div>
+
+        <div class="movie">
+          <img src="movie_10.jpg" alt="Dragon Ball Super: Super Hero Movie Poster">
+          <h1>Dragon Ball Super: Super Hero</h1><br>
+          <p>
+            A 2022 Japanese computer-animated martial arts<br> 
+             fantasy adventure film<br><br>
+             Best Anime Movie - <br>
+             ComicBook.com Golden Issue Award 2022
+          </p>
+        </div>
+
+        <div class="movie">
+          <img src="movie_11.jpg" alt="The First Slam Dunk Movie Poster">
+          <h1>The First Slam Dunk</h1><br>
+          <p>
+            A 2022 Japanese animated sports film<br><br>  
+            Animation of the Year - Japan Academy Prize 2022
+          </p>
+        </div>
+
+        <div class="movie">
+          <img src="movie_12.jpg" alt="Suzume Movie Poster">
+          <h1>Suzume</h1><br>
+          <p>
+            A 2022 Japanese animated fantasy adventure film<br><br>
+            Outstanding Achievement in Music - <br>
+            Japan Academy Prize 2022<br>
+            Popularity award - Japan Academy Prize 2022
+          </p>
+        </div>
+      </div>
+
+
+      <footer class="footer">
+        <div class="footer_container">
+          <div class="footer_row">
+    
+            <div class="footer-col aboutus">
+              <h4>About Us</h4>
+              <p>
+                We, a platform designed to help new users start their journey into the world of anime, Bollywood and
+                Hollywood movies, and K-dramas.
+                Our goal is to provide personalized recommendations to each user based on their preferences and interests,
+                helping them find the perfect show or movie to watch.
+              </p>
+            </div>
+    
+            <div class="footer-col explore">
+              <h4>Explore</h4>
+              <ul>
+                <li><a href="shop.html">shop</a></li>
+                <li><a href="#">quiz</a></li>
+                <!-- li>a to get many at once -->
+                <li><a href="comments.html">comments</a></li>
+                <li><a href="#">sitemap</a></li>
+                <li><a href="team.html">about us</a></li>
+                <li><a href="#">gallery</a></li>
+              </ul>
+            </div>
+    
+            <div class="footer-col shop">
+              <h4>online shop</h4>
+              <ul>
+                <li><a href="shop.html">Anime </a></li>
+                <li><a href="shop.html">Bollywood </a></li>
+                <li><a href="shop.html">K-Drama </a></li>
+                <li><a href="shop.html">Hollywood</a></li>
+              </ul>
+            </div>
+    
+            <div class="footer-col links">
+              <h4>follow us</h4>
+              <div class="social-links">
+                <a href="https://www.instagram.com/"><img src="/WEB CW NEW/logos/instagram-logo-24.png" alt="icon-instagram"></a>
+                <a href="https://www.facebook.com/"><img src="/WEB CW NEW/logos/facebook-logo-24.png" alt="facebook-logo"></a>
+                <a href="https://twitter.com/?lang=en"><img src="/WEB CW NEW/logos/twitter-logo-24.png" alt="twitter-logo"></a>
+                <a href="https://www.linkedin.com/"><img src="/WEB CW NEW/logos/linkedin-logo-24.png" alt="linkedin-logo"></a>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <p class="footer_copyright">SHOWSHINE © 2023 - All Rights Reserved</p>
+          <div class="footer_page_editor">
+
+            <a href="/WEB CW NEW/Page_Editor.html">Link to Page developer details</a>
+          </div>
+          </div>>
+      </footer>
+
+
+      <script src="Image_Gallery.js"></script>
+      
+      
+  </body>
+  
+</html>
